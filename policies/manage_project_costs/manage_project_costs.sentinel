@@ -13,3 +13,4 @@ main = rule when print(estimates.summary) {
 }
 
 print("The budget set for this deployment is: $", int(budget))
+print();
