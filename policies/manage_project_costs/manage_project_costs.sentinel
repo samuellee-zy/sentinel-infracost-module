@@ -9,6 +9,7 @@ estimates = infracost.auth(x_api_key)
 main = rule when print(estimates.summary) {
     all estimates.data.projects as _, project {
         infracost.estimate(project.breakdown.totalMonthlyCost).less_than_or_equal_to(budget)
-	print("The budget set for this deployment is: ", budget)
     }
 }
+
+print("The budget set for this deployment is: ", budget)
