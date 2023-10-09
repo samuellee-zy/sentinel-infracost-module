@@ -1,4 +1,5 @@
 import "infracost"
+import "decimal"
 
 param x_api_key
 param budget
@@ -12,4 +13,4 @@ main = rule when print(estimates.summary) {
     }
 }
 
-print("The budget set for this deployment is: ", budget)
+print("The budget set for this deployment is: $", decimal.new(budget))
